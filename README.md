@@ -72,7 +72,7 @@ The table below lists leading commercial notification platforms, ranked descendi
 
 ## 🔓 Open-Source GitHub Projects
 
-Ranked descending by **GitHub Stars_Count**:
+Ranked descending by **GitHub_Stars_Count**:
 
 ### 1. 🥇 [Novu](https://github.com/novuhq/novu) [![GitHub_Stars](https://img.shields.io/github/stars/novuhq/novu?style=social&color=white)](https://github.com/novuhq/novu/stargazers)
 - **Primary Focus:** All-in-one open-source notification infrastructure and developer workflow engine.
