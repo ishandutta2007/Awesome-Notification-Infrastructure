@@ -72,9 +72,9 @@ The table below lists leading commercial notification platforms, ranked descendi
 
 ## 🔓 Open-Source GitHub Projects
 
-Ranked descending by **GitHub Star Count**:
+Ranked descending by **GitHub Stars_Count**:
 
-### 1. 🥇 [Novu](https://github.com/novuhq/novu) [![GitHub stars](https://img.shields.io/github/stars/novuhq/novu?style=social&color=white)](https://github.com/novuhq/novu/stargazers)
+### 1. 🥇 [Novu](https://github.com/novuhq/novu) [![GitHub_Stars](https://img.shields.io/github/stars/novuhq/novu?style=social&color=white)](https://github.com/novuhq/novu/stargazers)
 - **Primary Focus:** All-in-one open-source notification infrastructure and developer workflow engine.
 - **Tech Stack:** TypeScript, NestJS, BullMQ, Redis, MongoDB, React.
 - **Key Features:**
@@ -83,7 +83,7 @@ Ranked descending by **GitHub Star Count**:
   - Visual workflow designer with conditional branching, digests, delay windows, and subscriber preference management.
   - Full SDK support across Node.js, Python, Go, Java, PHP, .NET, Ruby, and Kotlin.
 
-### 2. 🥈 [ntfy](https://github.com/binwiederhier/ntfy) [![GitHub stars](https://img.shields.io/github/stars/binwiederhier/ntfy?style=social&color=white)](https://github.com/binwiederhier/ntfy/stargazers)
+### 2. 🥈 [ntfy](https://github.com/binwiederhier/ntfy) [![GitHub_Stars](https://img.shields.io/github/stars/binwiederhier/ntfy?style=social&color=white)](https://github.com/binwiederhier/ntfy/stargazers)
 - **Primary Focus:** Ultra-lightweight HTTP-based pub-sub push notification server.
 - **Tech Stack:** Go (Golang), SQLite / File cache, native Android and iOS mobile applications.
 - **Key Features:**
@@ -92,7 +92,7 @@ Ranked descending by **GitHub Star Count**:
   - iOS push notifications powered through an APNs relay to circumvent background WebSocket restrictions.
   - UnifiedPush distributor enabling privacy-conscious push notifications without proprietary Google FCM dependencies.
 
-### 3. 🥉 [listmonk](https://github.com/knadh/listmonk) [![GitHub stars](https://img.shields.io/github/stars/knadh/listmonk?style=social&color=white)](https://github.com/knadh/listmonk/stargazers)
+### 3. 🥉 [listmonk](https://github.com/knadh/listmonk) [![GitHub_Stars](https://img.shields.io/github/stars/knadh/listmonk?style=social&color=white)](https://github.com/knadh/listmonk/stargazers)
 - **Primary Focus:** High-performance self-hosted newsletter and mailing list manager.
 - **Tech Stack:** Go (Golang), PostgreSQL, Vue.js.
 - **Key Features:**
@@ -101,7 +101,7 @@ Ranked descending by **GitHub Star Count**:
   - Rich dynamic HTML/text templates powered by Go template syntax and SQL-driven subscriber targeting.
   - Native bounce handling, unsubscribe pipelines, and comprehensive delivery metrics dashboard.
 
-### 4. 🏅 [Apprise](https://github.com/caronc/apprise) [![GitHub stars](https://img.shields.io/github/stars/caronc/apprise?style=social&color=white)](https://github.com/caronc/apprise/stargazers)
+### 4. 🏅 [Apprise](https://github.com/caronc/apprise) [![GitHub_Stars](https://img.shields.io/github/stars/caronc/apprise?style=social&color=white)](https://github.com/caronc/apprise/stargazers)
 - **Primary Focus:** Universal push notification routing library and microservice.
 - **Tech Stack:** Python, CLI tool, optional REST API wrapper (`apprise-api`).
 - **Key Features:**
@@ -109,7 +109,7 @@ Ranked descending by **GitHub Star Count**:
   - Supports Telegram, Discord, Slack, Pushover, Twilio, AWS SES/SNS, matrix, pushbullet, email SMTP, and custom webhooks.
   - Send-only abstraction layer that simplifies multi-service alerting across scripts, CI/CD runners, and microservices.
 
-### 5. 🏅 [Postal](https://github.com/postalserver/postal) [![GitHub stars](https://img.shields.io/github/stars/postalserver/postal?style=social&color=white)](https://github.com/postalserver/postal/stargazers)
+### 5. 🏅 [Postal](https://github.com/postalserver/postal) [![GitHub_Stars](https://img.shields.io/github/stars/postalserver/postal?style=social&color=white)](https://github.com/postalserver/postal/stargazers)
 - **Primary Focus:** Full-featured self-hosted mail delivery platform for incoming and outgoing transactional email.
 - **Tech Stack:** Ruby, MySQL, RabbitMQ.
 - **Key Features:**
@@ -117,7 +117,7 @@ Ranked descending by **GitHub Star Count**:
   - Rich web interface for inspecting delivery logs, bounce analysis, webhook tracking, and domain verification (SPF/DKIM).
   - Outgoing SMTP and HTTP APIs alongside incoming email parsing to webhooks.
 
-### 6. 🏅 [Gotify](https://github.com/gotify/server) [![GitHub stars](https://img.shields.io/github/stars/gotify/server?style=social&color=white)](https://github.com/gotify/server/stargazers)
+### 6. 🏅 [Gotify](https://github.com/gotify/server) [![GitHub_Stars](https://img.shields.io/github/stars/gotify/server?style=social&color=white)](https://github.com/gotify/server/stargazers)
 - **Primary Focus:** Simple, minimal self-hosted WebSocket push notification server.
 - **Tech Stack:** Go (Golang), SQLite, Vue.js dashboard, native Android client.
 - **Key Features:**
@@ -125,7 +125,7 @@ Ranked descending by **GitHub Star Count**:
   - Straightforward REST API: `POST /message?token=<apptoken>` with priority support and markdown rendering.
   - Real-time client updates over WebSockets with an official companion Android app and responsive web UI.
 
-### 7. 🏅 [Bark](https://github.com/Finb/Bark) [![GitHub stars](https://img.shields.io/github/stars/Finb/Bark?style=social&color=white)](https://github.com/Finb/Bark/stargazers)
+### 7. 🏅 [Bark](https://github.com/Finb/Bark) [![GitHub_Stars](https://img.shields.io/github/stars/Finb/Bark?style=social&color=white)](https://github.com/Finb/Bark/stargazers)
 - **Primary Focus:** Custom iOS push notification server and client for developers.
 - **Tech Stack:** Go (Golang), Swift (iOS native app).
 - **Key Features:**
@@ -133,7 +133,7 @@ Ranked descending by **GitHub Star Count**:
   - End-to-end encryption support for payload privacy and custom sound, icon, and grouping configurations.
   - Fully self-hostable server or usable via public encrypted relay server.
 
-### 8. 🏅 [Gorush](https://github.com/appleboy/gorush) [![GitHub stars](https://img.shields.io/github/stars/appleboy/gorush?style=social&color=white)](https://github.com/appleboy/gorush/stargazers)
+### 8. 🏅 [Gorush](https://github.com/appleboy/gorush) [![GitHub_Stars](https://img.shields.io/github/stars/appleboy/gorush?style=social&color=white)](https://github.com/appleboy/gorush/stargazers)
 - **Primary Focus:** High-throughput push notification microservice engine in Go.
 - **Tech Stack:** Go (Golang), HTTP/2, Redis queue support.
 - **Key Features:**
@@ -141,7 +141,7 @@ Ranked descending by **GitHub Star Count**:
   - Capable of saturating thousands of push notifications per second with low CPU and memory footprints.
   - Exposes RESTful JSON endpoints, gRPC API, graceful shutdown, and Prometheus metrics endpoint.
 
-### 9. 🏅 [Dittofeed](https://github.com/dittofeed/dittofeed) [![GitHub stars](https://img.shields.io/github/stars/dittofeed/dittofeed?style=social&color=white)](https://github.com/dittofeed/dittofeed/stargazers)
+### 9. 🏅 [Dittofeed](https://github.com/dittofeed/dittofeed) [![GitHub_Stars](https://img.shields.io/github/stars/dittofeed/dittofeed?style=social&color=white)](https://github.com/dittofeed/dittofeed/stargazers)
 - **Primary Focus:** Open-source event-driven customer journey and engagement platform.
 - **Tech Stack:** TypeScript, Node.js, ClickHouse, PostgreSQL, Temporal.io.
 - **Key Features:**
@@ -149,7 +149,7 @@ Ranked descending by **GitHub Star Count**:
   - Temporal-powered durable workflow orchestration for delays, condition evaluations, and user branching.
   - Native multi-channel support across email, SMS, push notifications, and webhook webhooks.
 
-### 10. 🏅 [Notifuse](https://github.com/Notifuse/notifuse) [![GitHub stars](https://img.shields.io/github/stars/Notifuse/notifuse?style=social&color=white)](https://github.com/Notifuse/notifuse/stargazers)
+### 10. 🏅 [Notifuse](https://github.com/Notifuse/notifuse) [![GitHub_Stars](https://img.shields.io/github/stars/Notifuse/notifuse?style=social&color=white)](https://github.com/Notifuse/notifuse/stargazers)
 - **Primary Focus:** Open-source transactional and newsletter email delivery platform.
 - **Tech Stack:** TypeScript, Vue.js, MongoDB, Redis.
 - **Key Features:**
@@ -157,7 +157,7 @@ Ranked descending by **GitHub Star Count**:
   - Multi-provider smart failover across AWS SES, SendGrid, Mailgun, Postmark, and custom SMTP.
   - Centralized unsubscribe preference centers and detailed delivery observability.
 
-### 11. 🏅 [Shoutrrr](https://github.com/containrrr/shoutrrr) [![GitHub stars](https://img.shields.io/github/stars/containrrr/shoutrrr?style=social&color=white)](https://github.com/containrrr/shoutrrr/stargazers)
+### 11. 🏅 [Shoutrrr](https://github.com/containrrr/shoutrrr) [![GitHub_Stars](https://img.shields.io/github/stars/containrrr/shoutrrr?style=social&color=white)](https://github.com/containrrr/shoutrrr/stargazers)
 - **Primary Focus:** Notification dispatch library for Go microservices and container tools.
 - **Tech Stack:** Go (Golang).
 - **Key Features:**
@@ -165,7 +165,7 @@ Ranked descending by **GitHub Star Count**:
   - Single URL routing schema dispatching alerts to Slack, Discord, Telegram, Pushbullet, Teams, Matrix, and SMTP.
   - Zero heavy external dependencies with fast execution.
 
-### 12. 🏅 [Uniqush](https://github.com/uniqush/uniqush-push) [![GitHub stars](https://img.shields.io/github/stars/uniqush/uniqush-push?style=social&color=white)](https://github.com/uniqush/uniqush-push/stargazers)
+### 12. 🏅 [Uniqush](https://github.com/uniqush/uniqush-push) [![GitHub_Stars](https://img.shields.io/github/stars/uniqush/uniqush-push?style=social&color=white)](https://github.com/uniqush/uniqush-push/stargazers)
 - **Primary Focus:** Multi-platform push notification server backend.
 - **Tech Stack:** Go (Golang), Redis.
 - **Key Features:**
@@ -228,7 +228,7 @@ Contributions are warmly welcomed! To suggest a product or open-source project:
 
 1. Fork this repository: `https://github.com/ishandutta2007/Awesome-Notification-Infrastructure`.
 2. Edit `README.md` following the established table or open-source list format.
-3. Include factual data: product name, GitHub link, accurate pricing tier or star badge, and clear channel support.
+3. Include factual data: product name, GitHub link, accurate pricing tier or Stars_Badge, and clear channel support.
 4. Submit a Pull Request with a concise summary.
 
 Explore more curated developer lists at [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome)!
