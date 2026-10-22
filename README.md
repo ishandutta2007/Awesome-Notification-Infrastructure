@@ -1,6 +1,6 @@
 # Awesome-Notification-Infrastructure
 
-# Top Notification Infrastructure Ecosystem
+## Top Notification Infrastructure Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Multi-Channel Routing, In-App Inboxes & Self-Hosted Data Ownership*  
