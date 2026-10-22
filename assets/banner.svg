@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="380" style="background: transparent;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="380">
   <defs>
     <!-- Background Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -8,8 +8,8 @@
     </linearGradient>
 
     <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="rgba(30, 41, 59, 0.75)" />
-      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.85)" />
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
     </linearGradient>
 
     <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -28,56 +28,21 @@
       <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
     </linearGradient>
 
+    <!-- Filters for text shadow -->
+    <filter id="shadowTitle" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.85" />
+    </filter>
+
+    <filter id="shadowSubtitle" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.9" />
+    </filter>
+
     <!-- Grid Pattern -->
     <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.07)" stroke-width="1" />
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" stroke-opacity="0.08" stroke-width="1" />
     </pattern>
 
     <style>
-      @keyframes pulseGlow {
-        0%, 100% { opacity: 0.35; transform: scale(1); }
-        50% { opacity: 0.65; transform: scale(1.08); }
-      }
-      @keyframes floatSlow {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-7px); }
-      }
-      @keyframes floatReverse {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(6px); }
-      }
-      @keyframes dashFlow {
-        to { stroke-dashoffset: -40; }
-      }
-      @keyframes ringPulse {
-        0% { r: 24; opacity: 0.8; }
-        100% { r: 54; opacity: 0; }
-      }
-
-      .pulse-glow-1 {
-        animation: pulseGlow 6s ease-in-out infinite;
-        transform-origin: 250px 140px;
-      }
-      .pulse-glow-2 {
-        animation: pulseGlow 7s ease-in-out infinite reverse;
-        transform-origin: 950px 200px;
-      }
-      .floating-pill-1 { animation: floatSlow 4s ease-in-out infinite; }
-      .floating-pill-2 { animation: floatReverse 4.5s ease-in-out infinite; }
-      .floating-pill-3 { animation: floatSlow 5s ease-in-out infinite 0.5s; }
-      .floating-pill-4 { animation: floatReverse 4.8s ease-in-out infinite 1s; }
-      .flow-path {
-        stroke-dasharray: 6 6;
-        animation: dashFlow 2.5s linear infinite;
-      }
-      .beacon-ring-1 {
-        animation: ringPulse 2.8s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
-        transform-origin: 600px 75px;
-      }
-      .beacon-ring-2 {
-        animation: ringPulse 2.8s cubic-bezier(0.2, 0.8, 0.4, 1) infinite 1.4s;
-        transform-origin: 600px 75px;
-      }
       .banner-title {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         font-weight: 800;
@@ -97,28 +62,46 @@
   </defs>
 
   <!-- Outer Rounded Container -->
-  <rect width="1200" height="380" rx="20" fill="url(#bgGrad)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.5" />
+  <rect width="1200" height="380" rx="20" fill="url(#bgGrad)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1.5" />
 
   <!-- Background Grid -->
   <rect width="1200" height="380" rx="20" fill="url(#gridPattern)" />
 
   <!-- Ambient Dynamic Glowing Circles -->
-  <circle class="pulse-glow-1" cx="240" cy="120" r="160" fill="url(#glowGrad1)" />
-  <circle class="pulse-glow-2" cx="960" cy="220" r="180" fill="url(#glowGrad2)" />
+  <circle cx="240" cy="120" r="160" fill="url(#glowGrad1)">
+    <animate attributeName="opacity" values="0.35;0.65;0.35" dur="6s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="960" cy="220" r="180" fill="url(#glowGrad2)">
+    <animate attributeName="opacity" values="0.65;0.35;0.65" dur="7s" repeatCount="indefinite" />
+  </circle>
 
   <!-- Network Circuit Lines (Subtle in background) -->
-  <g stroke="rgba(129, 140, 248, 0.25)" stroke-width="1.5" fill="none">
-    <path class="flow-path" d="M 600 75 Q 400 40 240 70" />
-    <path class="flow-path" d="M 600 75 Q 800 40 960 70" />
-    <path class="flow-path" d="M 600 75 Q 350 110 150 140" />
-    <path class="flow-path" d="M 600 75 Q 850 110 1050 140" />
+  <g stroke="#818cf8" stroke-opacity="0.3" stroke-width="1.5" fill="none">
+    <path d="M 600 75 Q 400 40 240 70" stroke-dasharray="6,6">
+      <animate attributeName="stroke-dashoffset" values="0;-36" dur="2.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M 600 75 Q 800 40 960 70" stroke-dasharray="6,6">
+      <animate attributeName="stroke-dashoffset" values="0;-36" dur="2.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M 600 75 Q 350 110 150 140" stroke-dasharray="6,6">
+      <animate attributeName="stroke-dashoffset" values="0;-36" dur="2.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M 600 75 Q 850 110 1050 140" stroke-dasharray="6,6">
+      <animate attributeName="stroke-dashoffset" values="0;-36" dur="2.5s" repeatCount="indefinite" />
+    </path>
   </g>
 
   <!-- Central Hub / Dynamic Beacon -->
   <g id="hub" transform="translate(600, 75)">
     <!-- Pulse Rings -->
-    <circle class="beacon-ring-1" cx="0" cy="0" r="24" fill="none" stroke="#818cf8" stroke-width="2" />
-    <circle class="beacon-ring-2" cx="0" cy="0" r="24" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#818cf8" stroke-width="2">
+      <animate attributeName="r" values="24;54" dur="2.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#38bdf8" stroke-width="1.5">
+      <animate attributeName="r" values="24;54" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="2.8s" begin="1.4s" repeatCount="indefinite" />
+    </circle>
     
     <!-- Central Node Core -->
     <circle cx="0" cy="0" r="26" fill="#1e1b4b" stroke="url(#accentGrad)" stroke-width="2.5" />
@@ -129,39 +112,45 @@
 
   <!-- Dynamic Floating Channel Badges (Flanking the sides, staying out of title zone) -->
   <!-- Left Side Badges -->
-  <g class="floating-pill-1" transform="translate(90, 60)">
-    <rect width="130" height="34" rx="17" fill="url(#cardGrad)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1" />
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="90 60; 90 53; 90 60" dur="4s" repeatCount="indefinite" />
+    <rect width="130" height="34" rx="17" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1" />
     <circle cx="20" cy="17" r="4.5" fill="#38bdf8" />
     <text x="34" y="21" fill="#e2e8f0" class="banner-tag">⚡ Push / APNs</text>
   </g>
 
-  <g class="floating-pill-2" transform="translate(60, 130)">
-    <rect width="145" height="34" rx="17" fill="url(#cardGrad)" stroke="rgba(129, 140, 248, 0.4)" stroke-width="1" />
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="60 130; 60 136; 60 130" dur="4.5s" repeatCount="indefinite" />
+    <rect width="145" height="34" rx="17" fill="url(#cardGrad)" stroke="#818cf8" stroke-opacity="0.4" stroke-width="1" />
     <circle cx="20" cy="17" r="4.5" fill="#818cf8" />
     <text x="34" y="21" fill="#e2e8f0" class="banner-tag">✉️ Email / SMTP</text>
   </g>
 
-  <g class="floating-pill-3" transform="translate(100, 200)">
-    <rect width="140" height="34" rx="17" fill="url(#cardGrad)" stroke="rgba(192, 132, 252, 0.4)" stroke-width="1" />
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="100 200; 100 193; 100 200" dur="5s" repeatCount="indefinite" />
+    <rect width="140" height="34" rx="17" fill="url(#cardGrad)" stroke="#c084fc" stroke-opacity="0.4" stroke-width="1" />
     <circle cx="20" cy="17" r="4.5" fill="#c084fc" />
     <text x="34" y="21" fill="#e2e8f0" class="banner-tag">💬 In-App Inbox</text>
   </g>
 
   <!-- Right Side Badges -->
-  <g class="floating-pill-2" transform="translate(980, 60)">
-    <rect width="130" height="34" rx="17" fill="url(#cardGrad)" stroke="rgba(52, 211, 153, 0.4)" stroke-width="1" />
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="980 60; 980 66; 980 60" dur="4.5s" repeatCount="indefinite" />
+    <rect width="130" height="34" rx="17" fill="url(#cardGrad)" stroke="#34d399" stroke-opacity="0.4" stroke-width="1" />
     <circle cx="20" cy="17" r="4.5" fill="#34d399" />
     <text x="34" y="21" fill="#e2e8f0" class="banner-tag">📱 SMS &amp; Chat</text>
   </g>
 
-  <g class="floating-pill-1" transform="translate(995, 130)">
-    <rect width="145" height="34" rx="17" fill="url(#cardGrad)" stroke="rgba(251, 146, 60, 0.4)" stroke-width="1" />
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="995 130; 995 123; 995 130" dur="4s" repeatCount="indefinite" />
+    <rect width="145" height="34" rx="17" fill="url(#cardGrad)" stroke="#fb923c" stroke-opacity="0.4" stroke-width="1" />
     <circle cx="20" cy="17" r="4.5" fill="#fb923c" />
     <text x="34" y="21" fill="#e2e8f0" class="banner-tag">🪝 Webhook Bus</text>
   </g>
 
-  <g class="floating-pill-4" transform="translate(960, 200)">
-    <rect width="150" height="34" rx="17" fill="url(#cardGrad)" stroke="rgba(244, 114, 182, 0.4)" stroke-width="1" />
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="960 200; 960 206; 960 200" dur="4.8s" repeatCount="indefinite" />
+    <rect width="150" height="34" rx="17" fill="url(#cardGrad)" stroke="#f472b6" stroke-opacity="0.4" stroke-width="1" />
     <circle cx="20" cy="17" r="4.5" fill="#f472b6" />
     <text x="34" y="21" fill="#e2e8f0" class="banner-tag">🛡️ Self-Hosted Hub</text>
   </g>
@@ -169,25 +158,25 @@
   <!-- FOREGROUND: Main Title and Subtitles (Positioned clearly in center foreground) -->
   <g transform="translate(600, 195)">
     <!-- Category Pill -->
-    <rect x="-140" y="-45" width="280" height="26" rx="13" fill="rgba(99, 102, 241, 0.2)" stroke="#6366f1" stroke-width="1" />
+    <rect x="-140" y="-45" width="280" height="26" rx="13" fill="#6366f1" fill-opacity="0.2" stroke="#6366f1" stroke-width="1" />
     <text x="0" y="-28" text-anchor="middle" fill="#a5b4fc" class="banner-tag" letter-spacing="1">CURATED DEVELOPER DIRECTORY</text>
 
     <!-- Main Title with Gradient and Contrast Shadow -->
-    <text x="0" y="22" text-anchor="middle" fill="url(#accentGrad)" font-size="42" class="banner-title" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.85))">
+    <text x="0" y="22" text-anchor="middle" fill="url(#accentGrad)" font-size="42" class="banner-title" filter="url(#shadowTitle)">
       Awesome Notification Infrastructure
     </text>
 
     <!-- Secondary Line -->
-    <text x="0" y="62" text-anchor="middle" fill="#cbd5e1" font-size="16.5" class="banner-subtitle" filter="drop-shadow(0 2px 8px rgba(0,0,0,0.9))">
+    <text x="0" y="62" text-anchor="middle" fill="#cbd5e1" font-size="16.5" class="banner-subtitle" filter="url(#shadowSubtitle)">
       Multi-Channel Orchestration • In-App Inboxes • Push Servers • Delivery Observability
     </text>
 
     <!-- Feature Highlights / Specs -->
     <g transform="translate(0, 108)">
-      <rect x="-310" y="-18" width="620" height="32" rx="16" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(148, 163, 184, 0.2)" stroke-width="1" />
+      <rect x="-310" y="-18" width="620" height="32" rx="16" fill="#0f172a" fill-opacity="0.85" stroke="#94a3b8" stroke-opacity="0.2" stroke-width="1" />
       <text x="0" y="3" text-anchor="middle" fill="#94a3b8" font-size="13" class="banner-subtitle">
-        🚀 <tspan fill="#f8fafc" font-weight="600">SaaS Giants &amp; Startups</tspan> &nbsp;|&nbsp; 
-        🔓 <tspan fill="#f8fafc" font-weight="600">Open-Source Engines</tspan> &nbsp;|&nbsp; 
+        🚀 <tspan fill="#f8fafc" font-weight="600">SaaS Giants &amp; Startups</tspan> &#160;|&#160; 
+        🔓 <tspan fill="#f8fafc" font-weight="600">Open-Source Engines</tspan> &#160;|&#160; 
         📊 <tspan fill="#f8fafc" font-weight="600">Pricing &amp; Star Rankings</tspan>
       </text>
     </g>
